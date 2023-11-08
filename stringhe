@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cstring>
+
+int main() {
+    // Copia di stringhe
+    char dest[100];
+    const char* source = "Hello, World!";
+    strcpy(dest, source);
+    std::cout << "Stringa copiata: " << dest << std::endl;
+
+    // Calcolo della lunghezza della stringa
+    const char* myString = "Hello, World!";
+    int length = strlen(myString);
+    std::cout << "Lunghezza della stringa: " << length << std::endl;
+
+    // Concatenazione di stringhe
+    char str1[100] = "Hello";
+    const char* str2 = " World!";
+    strcat(str1, str2);
+    std::cout << "Stringa concatenata: " << str1 << std::endl;
+
+    // Confronto di stringhe
+    const char* str3 = "Hello";
+    const char* str4 = "World";
+    int result = strcmp(str3, str4);
+    if (result == 0) {
+        std::cout << "Le stringhe sono uguali." << std::endl;
+    } else {
+        std::cout << "Le stringhe sono diverse." << std::endl;
+    }
+
+    return 0;
+}
